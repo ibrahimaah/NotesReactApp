@@ -2,7 +2,7 @@ import { FormEvent, useRef, useState } from "react";
 import { Button, Col, Form, Row, Stack } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import CreatableReactSelect from 'react-select/creatable'
-import { Note, NoteData, Tag } from "../App";
+import { NoteData, Tag } from "../App";
 import { v4 } from "uuid";
 
 type NoteFormProps = {
@@ -33,7 +33,7 @@ export default function NoteForm({ onSubmit,onAddTag,availableTags,title='',body
 
 
 
-    const handleChange = (newTags:CreatableSelectType[]) : void => {
+    const handleChange = (newTags:any) : void => {
 
         setSelectedTags(newTags.map((newTag:CreatableSelectType) => 
         {

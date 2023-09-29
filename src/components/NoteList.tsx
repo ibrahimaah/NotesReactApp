@@ -23,7 +23,7 @@ const handleClose = () => {
     setShow(false)
 }
 
-const handleChange = (newTags:CreatableSelectType[]) : void => {
+const handleChange = (newTags:any) : void => {
 
     setSelectedTags(newTags.map((newTag:CreatableSelectType) => 
     {
